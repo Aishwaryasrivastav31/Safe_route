@@ -1,0 +1,11 @@
+<div class='finding'><b>1 · Uncertainty-aware training is safer under slip.</b> The perfect-movement agent learns the 10-step centre aisle
+between hazards; trained with slip, Q-learning switches to the longer outer aisle and its hazard rate drops at every noisy test level.</div>
+<div class='finding'><b>2 · But it can over-fit to the noise.</b> Trained at r = 0.7 it never touches a hazard, yet it learns to crawl by
+pushing into a wall and letting slips carry it. With perfect movement that trick stalls: 0% success, 100% timeouts.
+Randomizing reliability during training is the most robust single choice.</div>
+<div class='finding'><b>3 · Cell-index Q-tables memorise the floor.</b> On the 10 levels they clear only the few whose route
+matches the training map. A local-view agent (sees its 4 neighbours + a planner hint, trained on 300 random floors)
+transfers much better, though it does not beat the risk-aware planner it gets its hint from.</div>
+<div class='finding'><b>4 · Short fine-tuning recovers every level.</b> In the campaign, every starting agent cleared all 10 levels
+on all 10 seeds, usually in a single 300-episode round. Starting fine-tuning at low exploration (ε = 0.3) reuses
+the old table; restarting at ε = 1.0 throws much of it away.</div>

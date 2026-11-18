@@ -1,0 +1,84 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "train_episodes": 3000,
+  "eval_episodes": 300,
+  "train_reliabilities": [
+    1.0,
+    0.95,
+    0.9,
+    0.8,
+    0.7
+  ],
+  "randomized_range": [
+    0.7,
+    1.0
+  ],
+  "test_reliabilities": [
+    1.0,
+    0.95,
+    0.9,
+    0.8,
+    0.7,
+    0.6,
+    0.5
+  ],
+  "q_learning": {
+    "alpha": 0.2,
+    "alpha_end": 0.02,
+    "gamma": 0.98,
+    "eps_start": 1.0,
+    "eps_end": 0.05,
+    "eps_decay_frac": 0.7
+  },
+  "levels": {
+    "n": 10,
+    "seed": 2026,
+    "test_reliability": 0.9,
+    "min_optimal": 0.85,
+    "candidates": 30
+  },
+  "local_view": {
+    "n_training_maps": 300,
+    "maps_seed": 777,
+    "episodes": 20000,
+    "reliability_range": [
+      0.7,
+      1.0
+    ]
+  },
+  "generalization_test_reliabilities": [
+    1.0,
+    0.9,
+    0.8
+  ],
+  "retraining": {
+    "source_train_reliability": 0.9,
+    "test_reliability": 0.9,
+    "budgets": [
+      0,
+      100,
+      300,
+      1000,
+      3000
+    ],
+    "eval_episodes": 200
+  },
+  "campaign": {
+    "clear_bar": 0.8,
+    "round_episodes": 300,
+    "max_rounds": 15,
+    "eval_episodes": 200
+  },
+  "learning_curve_window": 50
+}
