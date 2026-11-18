@@ -1,4 +1,4 @@
-# SafeRoute 🤖📦
+# SafeRoute 
 
 **Does a reinforcement-learning robot trained under uncertain movement navigate more safely than one trained with perfect movement?**
 
